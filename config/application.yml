@@ -1,0 +1,20 @@
+development:
+  database: <%= Rails.application.local_secrets.database %>
+  host: <%= Rails.application.local_secrets.host %>
+  username: <%= Rails.application.local_secrets.username %>
+  password: <%= Rails.application.local_secrets.password %>
+  fixer_api_access_key: <%= Rails.application.local_secrets.fixer_api_access_key %>
+
+test:
+  database: <%= Rails.application.local_secrets.database %>
+  host: <%= Rails.application.local_secrets.host %>
+  username: <%= Rails.application.local_secrets.username %>
+  password: <%= Rails.application.local_secrets.password %>
+  fixer_api_access_key: <%= Rails.application.local_secrets.fixer_api_access_key %>
+
+production:
+  database: <%= Rails.application.remote_secrets.database %>
+  host: <%= Rails.application.remote_secrets.host %>
+  username: <%= Rails.application.remote_secrets.username %>
+  password: <%= Rails.application.remote_secrets.password %>
+  fixer_api_access_key: <%= Rails.application.remote_secrets.fixer_api_access_key %>
