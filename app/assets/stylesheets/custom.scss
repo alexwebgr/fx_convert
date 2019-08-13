@@ -1,0 +1,9 @@
+/* here we can override bootstrap variables */
+/* like so
+$primary: #000;
+
+and it will automatically picked up at the next page reload
+ */
+
+/* keep this import statement at the end */
+@import "bootstrap";

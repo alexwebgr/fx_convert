@@ -1,0 +1,7 @@
+<tr id="<%= "#{fx_pair.base}_#{fx_pair.target}" %>">
+  <td><%= fx_pair.base %></td>
+  <td><%= fx_pair.target %></td>
+  <td><%= fx_pair.rate %></td>
+  <td><%= fx_pair.last_updated_at %></td>
+  <td><%= link_to 'Remove', dashboard_destroy_fx_pair_path(id: fx_pair.id), method: :delete, data: { confirm: 'Are you sure?' }, remote: true %></td>
+</tr>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <title>FxConvert</title>
     <%= csrf_meta_tags %>
@@ -10,6 +10,26 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div id="flash">
+      <% if flash.present? %>
+        <%= render 'shared/flash' %>
+      <% end %>
+    </div>
+
+    <div class="container">
+      <%= render 'shared/header' %>
+
+      <div class="row">
+        <div class="col">
+          <%= link_to 'Import currencies', dashboard_import_currencies_path, class: 'btn btn-primary float-right', remote: true %>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

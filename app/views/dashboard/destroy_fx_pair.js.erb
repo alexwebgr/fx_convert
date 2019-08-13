@@ -1,0 +1,9 @@
+var fx = $('#<%= "#{@fx_pair.base}_#{@fx_pair.target}" %>');
+if(fx.length) {
+    fx.remove();
+}
+
+var fx_pairs = $('#fx_pairs');
+if (fx_pairs.children().length < 1) {
+    fx_pairs.append('<%= j render partial: 'dashboard/fx_pair_empty' %>');
+}

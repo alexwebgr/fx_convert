@@ -1,0 +1,37 @@
+<%= form_with(model: fx_pair, local: true) do |form| %>
+  <% if fx_pair.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(fx_pair.errors.count, "error") %> prohibited this fx_pair from being saved:</h2>
+
+      <ul>
+      <% fx_pair.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :base %>
+    <%= form.text_field :base %>
+  </div>
+
+  <div class="field">
+    <%= form.label :target %>
+    <%= form.text_field :target %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rate %>
+    <%= form.text_field :rate %>
+  </div>
+
+  <div class="field">
+    <%= form.label :last_updated_at %>
+    <%= form.datetime_select :last_updated_at %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

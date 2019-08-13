@@ -11,6 +11,11 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require activestorage
 //= require turbolinks
-//= require_tree .
+//= require jquery
+//= require bootstrap
+//= require chosen-jquery
+
+//= require fxc
+//= require init_chosen
+//= require fxc_dropdown

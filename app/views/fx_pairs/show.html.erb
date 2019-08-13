@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Base:</strong>
+  <%= @fx_pair.base %>
+</p>
+
+<p>
+  <strong>Target:</strong>
+  <%= @fx_pair.target %>
+</p>
+
+<p>
+  <strong>Rate:</strong>
+  <%= @fx_pair.rate %>
+</p>
+
+<p>
+  <strong>Last updated at:</strong>
+  <%= @fx_pair.last_updated_at %>
+</p>
+
+<%= link_to 'Edit', edit_fx_pair_path(@fx_pair) %> |
+<%= link_to 'Back', fx_pairs_path %>

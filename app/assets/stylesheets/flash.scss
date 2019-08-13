@@ -1,0 +1,74 @@
+/* fixating and fading away the flash message */
+#flash {
+  left: 50%;
+  position: fixed;
+  width: 50%;
+  min-width: 350px;
+  max-width: 800px;
+  z-index: 1050;
+  transform: translate(-50%, 0%);
+  text-align: center;
+  transition: top 0.6s ease-out 0s;
+}
+
+#toast {
+  top: 20px;
+  right: 10px;
+  position: fixed;
+  max-width: 800px;
+  z-index: 1050;
+  text-align: center;
+}
+
+.animate {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+
+.fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+  -webkit-animation-delay: 5s;
+  -moz-animation-delay: 5s;
+  animation-delay: 5s;
+}
+
+.fadeOutNow {
+  -webkit-animation-name: fadeOutNow;
+  animation-name: fadeOutNow;
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+#flash ul {
+  margin-bottom: 0;
+  max-height: 400px;
+  overflow: auto;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    top: 50px;
+  }
+
+  to {
+    opacity: 0;
+    top: -1000px;
+  }
+}
+
+@keyframes fadeOutNow {
+  from {
+    top: 20px;
+  }
+
+  to {
+    top: -1000px;
+  }
+}
+/*  */
