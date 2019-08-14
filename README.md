@@ -25,7 +25,7 @@ Make sure that the database credentials listed in `config/development.yml.enc` m
 In order to create the database run `rails db:create` followed by `rails db:schema:load`
 
 #### How to run the test suite
-In order to run the test suite just run `bundle exec spec`
+In order to run the test suite just run `bundle exec rspec`
 
 #### Starting the app
 You can start the application server called 'Puma' by  running `rails s` in your terminal and stop it by hitting `CTRL + c`.
