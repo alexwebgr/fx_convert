@@ -25,12 +25,7 @@
 .idea
 # Ignore master key for decrypting credentials and more.
 /config/master.key
-
-/config/development.key
-/config/production.key
-
 /config/credentials/development.key
-
 /config/credentials/test.key
-
 /config/credentials/production.key
+coverage
