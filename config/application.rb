@@ -29,13 +29,5 @@ module FxConvert
 
     # Don't generate system test files.
     config.generators.system_tests = nil
-
-    def local_secrets
-      encrypted('config/development.yml.enc', key_path: 'config/development.key')
-    end
-
-    def remote_secrets
-      encrypted('config/production.yml.enc', key_path: 'config/production.key')
-    end
   end
 end

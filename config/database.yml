@@ -23,19 +23,17 @@ default: &default
 
 development:
   <<: *default
-  database: <%= Rails.application.config_for(:application)['database'] %>
-  username: <%= Rails.application.config_for(:application)['username'] %>
-  password: <%= Rails.application.config_for(:application)['password'] %>
-  host: <%= Rails.application.config_for(:application)['host'] %>
-  port: <%= Rails.application.config_for(:application)['port'] %>
+  database: <%= Rails.application.credentials[:database] %>
+  host: <%= Rails.application.credentials[:host] %>
+  username: <%= Rails.application.credentials[:username] %>
+  password: <%= Rails.application.credentials[:password] %>
 
 test:
   <<: *default
-  database: <%= Rails.application.config_for(:application)['database'] %>
-  username: <%= Rails.application.config_for(:application)['username'] %>
-  password: <%= Rails.application.config_for(:application)['password'] %>
-  host: <%= Rails.application.config_for(:application)['host'] %>
-  port: <%= Rails.application.config_for(:application)['port'] %>
+  database: <%= Rails.application.credentials[:database] %>
+  host: <%= Rails.application.credentials[:host] %>
+  username: <%= Rails.application.credentials[:username] %>
+  password: <%= Rails.application.credentials[:password] %>
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
@@ -59,8 +57,8 @@ test:
 #
 production:
   <<: *default
-  database: <%= Rails.application.config_for(:application)['database'] %>
-  username: <%= Rails.application.config_for(:application)['username'] %>
-  password: <%= Rails.application.config_for(:application)['password'] %>
-  host: <%= Rails.application.config_for(:application)['host'] %>
-  port: <%= Rails.application.config_for(:application)['port'] %>
+  database: <%= Rails.application.credentials[:database] %>
+  username: <%= Rails.application.credentials[:username] %>
+  password: <%= Rails.application.credentials[:password] %>
+  host: <%= Rails.application.credentials[:host] %>
+  port: 54632

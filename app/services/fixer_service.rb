@@ -3,7 +3,7 @@ require 'net/http'
 class FixerService
   def initialize
     @base_url = 'http://data.fixer.io/api'
-    @access_key = Rails.application.config_for(:application)['fixer_api_access_key']
+    @access_key = Rails.application.credentials[:fixer_api_access_key]
   end
 
   def import_currencies
