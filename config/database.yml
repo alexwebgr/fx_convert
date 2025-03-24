@@ -20,20 +20,16 @@ default: &default
   # For details on connection pooling, see Rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  database: fx_convert_development
+  host: localhost
+  username: postgres
+  password: password
 
 development:
   <<: *default
-  database: <%= Rails.application.credentials[:database] %>
-  host: <%= Rails.application.credentials[:host] %>
-  username: <%= Rails.application.credentials[:username] %>
-  password: <%= Rails.application.credentials[:password] %>
 
 test:
   <<: *default
-  database: <%= Rails.application.credentials[:database] %>
-  host: <%= Rails.application.credentials[:host] %>
-  username: <%= Rails.application.credentials[:username] %>
-  password: <%= Rails.application.credentials[:password] %>
 
 
 # As with config/secrets.yml, you never want to store sensitive information,
